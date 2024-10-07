@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: lite-crud-template
+# MYSQL CONFIG
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/temp_crud?allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ${mysql.password}
+    hikari:
+      maximum-pool-size: 5
+server:
+  port: 369
+mybatis:
+  mapper-locations: /mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
